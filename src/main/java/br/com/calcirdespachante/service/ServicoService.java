@@ -6,7 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import br.com.calcirdespachante.model.Servico;
-import br.com.calcirdespachante.model.ServicoSomado;
+import br.com.calcirdespachante.dto.ServicoSomado;
 import br.com.calcirdespachante.model.StatusServico;
 import br.com.calcirdespachante.model.TipoServicos;
 import br.com.calcirdespachante.repository.ServicoRepository;

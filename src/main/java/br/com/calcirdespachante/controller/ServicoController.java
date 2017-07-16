@@ -1,5 +1,7 @@
 package br.com.calcirdespachante.controller;
 
+import java.util.List;
+
 import javax.validation.Valid;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -12,6 +14,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.ModelAndView;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
+import br.com.calcirdespachante.dto.ServicoSomado;
 import br.com.calcirdespachante.model.Servico;
 import br.com.calcirdespachante.model.StatusServico;
 import br.com.calcirdespachante.model.TipoServicos;
@@ -74,13 +77,14 @@ public class ServicoController {
 	
 
 	@RequestMapping(value="/ServicosFinanceiro")
-	public ModelAndView listarServicosFinanceiro() {
-		ModelAndView mv = new ModelAndView("financeiro");
-		mv.addObject("statusServico", StatusServico.values());
-		mv.addObject("tipoServicos", TipoServicos.values());
-		mv.addObject("servicosSomado", servicoService.sumServico());
-		return mv;
-				
+	public List<ServicoSomado> listarServicosFinanceiro() {
+//		ModelAndView mv = new ModelAndView("financeiro");
+//		mv.addObject("statusServico", StatusServico.values());
+//		mv.addObject("tipoServicos", TipoServicos.values());
+//		mv.addObject("servicosSomado", servicoService.sumServico());
+//		return mv;""
+		return servicoService.sumServico();
+
 	}
 
 }
